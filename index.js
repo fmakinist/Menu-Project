@@ -12,8 +12,7 @@ const sectionArea = document.getElementById("sectionArea");
 const newSectionCollapse = document.getElementById("newSectionCollapse");
 const productAddSelect=document.getElementById("selectName");
 const listGroupİtem=document.getElementById("list-group-item");
-// const deleteIcon=document.getElementById("delete-item");
-// butona event atama
+
 
 addProduct.addEventListener("click", addUrun);
 
@@ -37,7 +36,7 @@ function addUrun() {
   else {
     yeniUrunEkle(newUrun, newUrunSalary);
     ShowAlert("success", "ÜRÜN EKLENDİ");
-    // menuacilma.classList.add("show");
+    
     productName.value = " ";
     productPrice.value = " ";
   }
@@ -133,9 +132,6 @@ function yeniBolumEkle(bolumAdi) {
   sectionArea.appendChild(newSectionCollapse);
   
 
- 
-                                
-  // const addToSelect=`<option value="${bolumAdi}">${bolumAdi}</option>`
   const addToSelect=document.createElement("option");
   addToSelect.value=bolumAdi;
   addToSelect.innerHTML=bolumAdi;
